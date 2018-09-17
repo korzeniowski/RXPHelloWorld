@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "web-watch": "webpack --progress --colors --watch",
-    "rn-watch": "tsc --watch",
+    "type-check": "tsc",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios"
@@ -13,6 +13,7 @@
   "devDependencies": {
     "@types/webpack": "^4.4.11",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-module-resolver": "^3.1.1",
     "source-map-loader": "^0.2.4",
     "ts-node": "^7.0.0",
     "typescript": "^3.0.3",
