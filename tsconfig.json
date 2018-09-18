@@ -6,6 +6,7 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],
+      "@components/*": ["src/components/web/*"],
     },
     "declaration": false,
     "noResolve": false,

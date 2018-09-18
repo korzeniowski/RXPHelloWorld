@@ -1,4 +1,5 @@
 import * as webpack from 'webpack';
+import * as path from 'path';
 
 const config: webpack.Configuration = {
     entry: "./src/index.tsx",
@@ -13,7 +14,11 @@ const config: webpack.Configuration = {
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+        alias: {
+            '@components': path.resolve(__dirname, 'src', 'components', 'web'),
+            '@src': path.resolve(__dirname, 'src'),
+        }
     },
 
     module: {
@@ -21,7 +26,7 @@ const config: webpack.Configuration = {
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" }
         ]
-    }
+    },
 };
 
 export default config;
