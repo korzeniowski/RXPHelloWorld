@@ -2,7 +2,7 @@
 import * as RX from 'reactxp';
 import SecondContainer from '@src/containers/SecondContainer';
 
-class SecondMainScreen extends RX.Component<{}> {
+class SecondMainScreen extends RX.Component<RX.CommonProps, RX.Stateless> {
   render() {
     return (
       <SecondContainer />

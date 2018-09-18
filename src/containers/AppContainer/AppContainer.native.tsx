@@ -1,14 +1,18 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
-import { Component } from 'react';
-import AppDrawerNavigator from '@src/navigation/appDrawer/appDrawer';
+import { NavigationContainerComponent, SafeAreaView } from 'react-navigation';
 
-class AppContainer extends Component<{}> {
+import AppDrawerNavigator from '@src/navigation/appDrawer/appDrawer';
+import NavigationService from '@src/navigation/NavigationService';
+
+class AppContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
   render() {
     return (
-      <RX.View style={{flex: 1}}>
-        <AppDrawerNavigator />
-      </RX.View>
+      <SafeAreaView style={{flex: 1}}>
+        <AppDrawerNavigator ref={(navigatorRef: NavigationContainerComponent) => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }} />
+      </SafeAreaView>
     );
   }
 }

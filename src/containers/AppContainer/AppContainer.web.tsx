@@ -1,9 +1,8 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
-import { Component } from 'react';
 import MainRouter from '@src/router/MainRouter';
 
-class AppContainer extends Component<{}> {
+class AppContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
   render() {
     return (
       <RX.View style={{flex: 1}}>

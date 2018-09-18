@@ -1,8 +1,7 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
-import { Component } from 'react';
 
-class SecondContainer extends Component<{}> {
+class SecondContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
   render() {
     return (
       <RX.View>

@@ -1,9 +1,8 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
-import { Component } from 'react';
 import Avatar from '@components/Avatar';
 
-class MainScreenContainer extends Component<{}> {
+class MainScreenContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
   render() {
     return (
       <RX.View>
