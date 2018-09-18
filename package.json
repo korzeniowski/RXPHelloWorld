@@ -4,7 +4,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "web-watch": "webpack --progress --colors --watch",
+    "web-watch": "webpack-dev-server",
     "type-check": "tsc --watch",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
@@ -16,18 +16,21 @@
     "@types/react-navigation": "^2.0.21",
     "@types/react-router-dom": "^4.3.1",
     "@types/webpack": "^4.4.11",
+    "@types/webpack-dev-server": "^3.1.1",
     "awesome-typescript-loader": "^5.2.1",
     "babel-plugin-module-resolver": "^3.1.1",
     "source-map-loader": "^0.2.4",
     "ts-node": "^7.0.0",
     "typescript": "^3.0.3",
-    "webpack": "^4.18.0",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^2.9.1"
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
+    "@types/html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-native": "^0.57.0",
