@@ -1,11 +1,11 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
-import MainScreenContainer from '@src/containers/MainScreenContainer';
+import MainContainer from '@src/containers/MainContainer/MainContainer';
 
 class MainScreen extends RX.Component<{}> {
   render() {
     return (
-      <MainScreenContainer />
+      <MainContainer />
     );
   }
 }

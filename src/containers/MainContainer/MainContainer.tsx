@@ -1,8 +1,9 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
-import Avatar from '@components/Avatar';
+import Avatar from '@components/Avatar/Avatar';
+import ListItem from '@components/ListItem/ListItem';
 
-class MainScreenContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
+class MainContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
   render() {
     return (
       <RX.View>
@@ -14,9 +15,10 @@ class MainScreenContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
           ) : null
         }
         <Avatar/>
+        <ListItem />
       </RX.View>
     );
   }
 }
 
-export default MainScreenContainer;
+export default MainContainer;

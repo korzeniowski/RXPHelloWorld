@@ -1,8 +1,8 @@
 import { createStackNavigator } from 'react-navigation';
-import SecondMainScreen from '@src/navigation/secondStack/screens/SecondMainScreen';
+import SecondScreen from '@src/navigation/secondStack/screens/SecondScreen';
 
 export default createStackNavigator({
   Home: {
-    screen: SecondMainScreen
+    screen: SecondScreen
   },
 });

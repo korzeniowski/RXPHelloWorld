@@ -1,6 +1,6 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
-import LinkButton from '@components/LinkButton';
+import LinkButton from '@components/LinkButton/LinkButton';
 
 const styles = {
   button: RX.Styles.createButtonStyle({
