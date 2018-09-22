@@ -5,17 +5,20 @@ import { PureComponent } from 'react';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { Text } from 'react-native';
 import styles from './styles';
+import UserListItem from '@src/components/UserListItem/UserListItem';
 
-class ListItem extends PureComponent<{}> {
+interface Props {
+  users: any;
+}
+
+class UsersList extends PureComponent<Props> {
   render() {
     return (
       <SwipeListView
         useFlatList
-        data="ASDasdasd"
-        renderItem={ () => (
-            <RX.View style={styles.listRow}>
-                <Text>I am in a SwipeListView</Text>
-            </RX.View>
+        data={this.props.users}
+        renderItem={ (data: any) => (
+          <UserListItem user={data.item} />
         )}
         renderHiddenItem={ () => (
             <RX.View>
@@ -30,4 +33,4 @@ class ListItem extends PureComponent<{}> {
   }
 }
 
-export default ListItem;
+export default UsersList;
