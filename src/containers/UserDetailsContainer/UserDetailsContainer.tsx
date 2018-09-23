@@ -1,8 +1,9 @@
 /** @jsx RX.createElement */
 import * as RX from 'reactxp';
+import User from '@src/types/user';
 
 interface Props {
-  user: any;
+  user: User;
 }
 
 class UserDetailsContainer extends RX.Component<Props, RX.Stateless> {

@@ -3,9 +3,10 @@ import * as RX from 'reactxp';
 import { PureComponent } from 'react';
 import styles from './styles';
 import NavigationService from '@src/navigation/NavigationService';
+import User from '@src/types/user';
 
 interface Props {
-  user: any;
+  user: User;
 }
 
 class UserListItem extends PureComponent<Props> {
