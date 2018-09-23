@@ -19,6 +19,7 @@ const styles = {
   userName: RX.Styles.createTextStyle({
     fontSize: 14,
     marginLeft: 20,
+    color: '#000000'
   }),
 }
 export default styles;

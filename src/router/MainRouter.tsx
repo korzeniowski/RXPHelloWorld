@@ -1,6 +1,7 @@
 import * as RX from 'reactxp';
 import MainScreen from '@src/router/screens/MainScreen';
 import SecondScreen from '@src/router/screens/SecondScreen';
+import UserDetailsScreen from '@src/router/screens/UserDetailsScreen';
 import {
   BrowserRouter as Router,
   Route,
@@ -20,6 +21,7 @@ class MainRouter extends RX.Component<RX.CommonProps, RX.Stateless> {
           <RX.View style={{flex: 1}}>
             <Route exact path="/" component={MainScreen}/>
             <Route exact path="/second" component={SecondScreen}/>
+            <Route path="/user" component={UserDetailsScreen}/>
           </RX.View>
         </RX.View>
       </Router>

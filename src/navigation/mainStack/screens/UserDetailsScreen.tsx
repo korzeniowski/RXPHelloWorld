@@ -6,12 +6,12 @@ interface Props {
   navigation: NavigationScreenProp<NavigationStackScreenOptions, null>;
 }
 
-class UserDetails extends RX.Component<Props, RX.Stateless> {
+class UserDetailsScreen extends RX.Component<Props, RX.Stateless> {
   render() {
     return (
-      <UserDetailsContainer user={this.props.navigation.state.params}/>
+      <UserDetailsContainer user={this.props.navigation.state.params!}/>
     );
   }
 }
 
-export default UserDetails;
+export default UserDetailsScreen;

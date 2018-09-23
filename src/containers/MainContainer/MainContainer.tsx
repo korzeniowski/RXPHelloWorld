@@ -31,9 +31,8 @@ class MainContainer extends RX.Component<RX.CommonProps, State> {
 
   render() {
     if(!this.state.users){
-      return <RX.Text>Loading</RX.Text>
+      return <RX.Text>Loading...</RX.Text>
     }
-    console.log(this.state.users);
     return (
       <RX.View>
         {
