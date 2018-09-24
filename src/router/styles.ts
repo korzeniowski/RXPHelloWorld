@@ -3,9 +3,8 @@ import * as RX from 'reactxp';
 
 const styles = {
   sidebarContainer: RX.Styles.createViewStyle({
-    flex: 0,
-    flexBasis: 350,
-    backgroundColor: '#cccccc',
+    width: 350,
+    backgroundColor: '#e2f2f8',
   }),
 }
 export default styles;

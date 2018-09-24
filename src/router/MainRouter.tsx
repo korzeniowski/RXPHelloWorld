@@ -5,7 +5,6 @@ import UserDetailsScreen from '@src/router/screens/UserDetailsScreen';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
 } from 'react-router-dom';
 import SidebarContainer from '@src/containers/SidebarContainer/SidebarContainer';
 import styles from '@src/router/styles';

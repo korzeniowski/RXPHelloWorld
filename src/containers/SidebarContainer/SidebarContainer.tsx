@@ -4,19 +4,24 @@ import LinkButton from '@components/LinkButton/LinkButton';
 
 const styles = {
   button: RX.Styles.createButtonStyle({
-    backgroundColor: '#cccccc',
-    padding: 4,
-    margin: 2,
+    padding: 10,
+    alignSelf: 'stretch',
+    borderBottomWidth: 1,
+    borderColor: '#cccccc',
   }),
   buttonText: RX.Styles.createTextStyle({
-    color: '#000000'
+    color: '#000000',
+  }),
+  sidebarContainer: RX.Styles.createViewStyle({
+    alignItems: 'flex-start',
+    alignSelf: 'stretch',
   })
 }
 
 class SidebarContainer extends RX.Component<RX.CommonProps, RX.Stateless> {
   render() {
     return (
-      <RX.View style={{alignItems: 'flex-start'}}>
+      <RX.View style={styles.sidebarContainer}>
         <LinkButton style={styles.button} route="/">
           <RX.Text style={styles.buttonText}>MAIN</RX.Text>
         </LinkButton>

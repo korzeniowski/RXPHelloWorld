@@ -11,7 +11,7 @@ interface Props {
 class UsersList extends PureComponent<Props> {
   render() {
     return (
-      <RX.View>
+      <RX.View style={{flex: 1}}>
         {
           this.props.users.map((user: User) => {
             return <Link to="/user" key={user.email}><UserListItem user={user}/></Link>

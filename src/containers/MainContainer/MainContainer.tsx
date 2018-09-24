@@ -6,6 +6,19 @@ interface State {
   users: any;
 }
 
+const styles = {
+  webHeader: RX.Styles.createViewStyle({
+    padding: 20,
+    flexDirection: 'row',
+    flex: 0,
+    justifyContent: 'center',
+    backgroundColor: '#cccccc',
+  }),
+  scrollView: RX.Styles.createScrollViewStyle({
+    flex: 1,
+  })
+}
+
 class MainContainer extends RX.Component<RX.CommonProps, State> {
   constructor(props: RX.CommonProps) {
     super(props);
@@ -34,13 +47,17 @@ class MainContainer extends RX.Component<RX.CommonProps, State> {
       return <RX.Text>Loading...</RX.Text>
     }
     return (
-      <RX.View>
+      <RX.View style={{flex: 1}}>
         {
           RX.Platform.getType() === 'web' ? (
-            <RX.Text>Users List</RX.Text>
+            <RX.View style={styles.webHeader}>
+              <RX.Text>Users List</RX.Text>
+            </RX.View>
           ) : null
         }
-        <UsersList users={this.state.users.results}/>
+        <RX.ScrollView style={styles.scrollView}>
+          <UsersList users={this.state.users.results}/>
+        </RX.ScrollView>
       </RX.View>
     );
   }
